@@ -45,6 +45,18 @@ pub const DEVICE_NUPHY_AIR60: DeviceSpec = DeviceSpec {
     ..DEVICE_BASE_SH68F90
 };
 
+pub const DEVICE_LEOBOG_HI8: DeviceSpec = DeviceSpec {
+    vendor_id: 0x258A,
+    product_id: 0x010C,
+    ..DEVICE_BASE_SH68F90
+};
+
+pub const DEVICE_MCHOSE_G98V2: DeviceSpec = DeviceSpec {
+    vendor_id: 0x41e4,
+    product_id: 0x2203,
+    ..DEVICE_BASE_SH68F90
+};
+
 pub const DEVICE_LEOBOG_HI75: DeviceSpec = DeviceSpec {
     vendor_id: 0x258a,
     product_id: 0x010c,
@@ -298,6 +310,8 @@ pub static DEVICES: Map<&'static str, DeviceSpec> = phf_map! {
     "yinren-r108" => DEVICE_YINREN_R108,
     "yunzii-al66" => DEVICE_XINMENG_M71, // same as xinmeng-m71
     "yunzii-al71" => DEVICE_XINMENG_M71, // same as xinmeng-m71
+    "g98v2" => DEVICE_MCHOSE_G98V2,
+    "hi8" => DEVICE_LEOBOG_HI8,
 };
 
 impl DeviceSpec {
